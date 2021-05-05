@@ -1,26 +1,28 @@
+/* Elements */
+img {
+    max-width:100%;
+}
+
+/* Structure */
+
 body {
+    display:flex;
+    flex-direction:column;
     margin:0;
     min-width:100vw;
     min-height:100vh;
-    background: #007b80;
-    background: linear-gradient(270deg, #007b80, #80017a, #007b80);
-    background-size: 200% 200%;
-    -webkit-animation: BGScroll 25s linear infinite;
-    -moz-animation: BGScroll 25s linear infinite;
-    animation: BGScroll 25s linear infinite;
+    background: #09d1ff;
+    background: linear-gradient(180deg, #09d1ff 0%, #aaf6f2 50%);
+    background-size: 100vw 100vh;
 }
 
+header {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:480px;
+}
 
-@keyframes BGScroll {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 200% 50%;
-    }
+header img {
+    width: 400px;
 }
