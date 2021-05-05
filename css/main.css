@@ -11,9 +11,7 @@ body {
     margin:0;
     min-width:100vw;
     min-height:100vh;
-    background: #09d1ff;
-    background: linear-gradient(180deg, #09d1ff 0%, #aaf6f2 50%);
-    background-size: 100vw 100vh;
+    background: #039DFD;
 }
 
 header {
@@ -21,8 +19,20 @@ header {
     justify-content:center;
     align-items:center;
     height:480px;
+    background-color: #aaf6f2;
+    background: linear-gradient(180deg, #09d1ff 0%, #aaf6f2 100%);
+    background-repeat:no-repeat;
+    background-size: 100% 100%;
 }
 
 header img {
-    width: 400px;
+    width: 720px;
+}
+
+main {
+    flex:1;
+    padding:40px;
+    background: linear-gradient(180deg, #43B9F0 0%, #039DFD 100%);
+    background-repeat:no-repeat;
+    background-size: 100% 80px;
 }
