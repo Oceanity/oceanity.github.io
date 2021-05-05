@@ -1,0 +1,25 @@
+body {
+    min-width:100vw;
+    min-height:100vh;
+    background: #007b80;
+    background: linear-gradient(270deg, #007b80, #80017a, #007b80);
+    background-size: 200% 200%;
+    -webkit-animation: BGScroll 25s linear infinite;
+    -moz-animation: BGScroll 25s linear infinite;
+    animation: BGScroll 25s linear infinite;
+}
+
+
+@keyframes BGScroll {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 200% 50%;
+    }
+}
