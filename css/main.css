@@ -105,6 +105,7 @@ pre {
     padding: 4px;
     font-family: "Consolas", serif;
     font-size: 16px;
+    font-weight:500;
     color: aqua;
     background: rgba(0,0,0,0.7);
     cursor: pointer;
