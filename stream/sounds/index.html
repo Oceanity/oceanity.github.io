@@ -13,6 +13,204 @@
     </header>
     <main>
 
+        <body>
+            <h1>Stream Sound Commands</h1>
+            <hr />
+            <h1>Zelda</h1>
+            <div class="sfx-group" name="Legend of Zelda: Animated Series, The">
+                <h2>Legend of Zelda: Animated Series, The</h2>
+                <ul>
+                    <li>
+                        <pre>!excuseme</pre> <span>[Link]</span> "Well excuuuuuuuuuuuuse me, Princess!"
+                    </li>
+                    <li>
+                        <pre>!smoochingtime</pre> <span>[Link]</span> "OH BOY! SMOOCHING TIME!"
+                    </li>
+                    <li>
+                        <pre>!skelescream</pre> <span>[Skeleton]</span> "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+                    </li>
+                </ul>
+            </div>
+            <div class="sfx-group" name="Legend of Zelda: Faces of Evil, The">
+                <h2>Legend of Zelda: Faces of Evil, The</h2>
+                <ul>
+                    <li>
+                        <pre>!morshu</pre> <span>[Morshu]</span> "Lamp Oil? Rope? Bombs? You want it? It's yours my
+                        friend, as long as you have
+                        enough rupees."
+                    </li>
+                    <li>
+                        <pre>!morshu2</pre> <span>[Morshu]</span> "Sorry Link, I can't give credit. Maybe come back when
+                        you're a little mmmmmmmm
+                        richer."
+                    </li>
+                    <li>
+                        <pre>!die</pre> <span>[Ganon]</span> "DIE!"
+                    </li>
+                </ul>
+            </div>
+            <div class="sfx-group" name="Legend of Zelda: Wand of Gamelon, The">
+                <h2>Legend of Zelda: Wand of Gamelon, The</h2>
+                <ul>
+                    <li>
+                        <pre>!good</pre> <span>[Hectan]</span> "You've killllllled meeeeeeee" <span>[Zelda]</span>
+                        "GOOD!"
+                    </li>
+                    <li>
+                        <pre>!illegal</pre> <span>[Duke Oncled]</span> "This is illegal, you know!"
+                    </li>
+                </ul>
+            </div>
+            <div class="sfx-group" name="Legend of Zelda: Wind Waker, The">
+                <h2>Legend of Zelda: Wind Waker, The</h2>
+                <ul>
+                    <li>
+                        <pre>!bye</pre> <span>[Beedle]</span> "Byyyyyyyye!"
+                    </li>
+                    <li>
+                        <pre>!ohh</pre> <span>[Beedle]</span> "Ohhhhhhhhhhhhhhh!"
+                    </li>
+                    <li>
+                        <pre>!thankyou</pre> <span>[Beedle]</span> "THANK YOU!"
+                    </li>
+                    <li>
+                        <pre>!sploosh</pre> <span>[Salvatore]</span> "Sploosh!"
+                    </li>
+                    <li>
+                        <pre>!kaboom</pre> <span>[Salvatore]</span> "Kaboom!"
+                    </li>
+                </ul>
+            </div>
+            <h1>Various Games</h1>
+            <div class="sfx-group" name="Sonic Adventure">
+
+                <h2>Sonic Adventure</h2>
+                <ul>
+                    <li>
+                        <pre>!ohno</pre> <span>[Knuckles]</span> "OHNO!"
+                    </li>
+                </ul>
+            </div>
+            <div class="sfx-group" name="Untitled Goose Game">
+
+                <h2>Untitled Goose Game</h2>
+                <ul>
+                    <li>
+                        <pre>!honk</pre> <span>[Goose]</span> "Honk!"
+                    </li>
+                </ul>
+            </div>
+            <h1>TV / Movies</h1>
+            <div class="sfx-group" name="Eric Andre Show">
+
+
+                <h2>Eric Andre Show</h2>
+                <ul>
+                    <li>
+                        <pre>!birdup</pre> <span>[Eric]</span> "BIRD UP!"
+                    </li>
+                    <li>
+                        <pre>!snaildown</pre> <span>[Hannibal]</span> "SNAIL DOWN!"
+                    </li>
+                </ul>
+            </div>
+            <div class="sfx-group" name="Gregory Horror Show">
+                <h2>Gregory Horror Show</h2>
+                <ul>
+                    <li>
+                        <pre>!judgement</pre> <span>[Judgement Boy]</span> "JUDGEMENT! NOW!"
+                    </li>
+                    <li>
+                        <pre>!judgementboy</pre> <span>[Judgement Boy]</span> "Do you know, who I am? They call me
+                        Judgement Boy. Do you know..."
+                    </li>
+                    <li>
+                        <pre>!yourchoice</pre> <span>[Judgement Boy]</span> "It was your choice, you have to live with
+                        it."
+                    </li>
+                </ul>
+            </div>
+            <div class="sfx-group" name="Kung Fu Panda">
+
+                <h2>Kung Fu Panda</h2>
+                <ul>
+                    <li>
+                        <pre>!monke</pre> <span>[Oogway]</span> "Mmmmmmm, monke."
+                    </li>
+                </ul>
+            </div>
+            <div class="sfx-group" name="Max Magician and the Legend of the Rings">
+
+                <h2>Max Magician and the Legend of the Rings</h2>
+                <ul>
+                    <li>
+                        <pre>!hawk</pre> <span>[Shira the Hawk]</span> "AAAAAAAAAAaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                    </li>
+                </ul>
+            </div>
+            <div class="sfx-group" name="ReBoot">
+
+                <h2>ReBoot</h2>
+                <ul>
+                    <li>
+                        <pre>!what</pre> <span>[Offscreen Chef]</span> "WHAT?!"
+                    </li>
+                </ul>
+            </div>
+            <script>
+                // Generate
+                const groups = document.getElementsByClassName("sfx-group");
+                for (let group of groups)
+                {
+                    const children = group.getElementsByTagName("div"),
+                        title = group.getAttribute("name"),
+                        header = document.createElement("h2"),
+                        list = document.createElement("ul");
+                    let entries = [];
+                    header.innerText = title;
+                    // Create child elements
+                    while (group.firstElementChild)
+                    {
+                        const child = group.firstElementChild,
+                            name = child.getAttribute("name"),
+                            text = child.innerText;
+
+                        if (name && text)
+                        {
+                            const entry = document.createElement("li");
+                            entry.innerHTML = `<pre>${ name }</pre> ${ text.replace(/(\[[^\]]+\])/ig, "<span>$1</span>") }`;
+                            entries.push(entry);
+                        }
+
+                        group.removeChild(child);
+                    }
+                    group.append(header);
+                    group.append(list);
+
+                    for (let entry of entries)
+                    {
+                        list.append(entry);
+                    }
+                }
+                // Copy on Click
+                const pres = document.getElementsByTagName("pre");
+                for (let pre of pres)
+                {
+                    pre.onclick = function (e) {
+                        document.execCommand("copy");
+                    }
+
+                    pre.addEventListener("copy", function (e) {
+                        e.preventDefault();
+                        if (e.clipboardData)
+                        {
+                            e.clipboardData.setData("text/plain", this.textContent);
+                            console.log(e.clipboardData.getData("text"));
+                        }
+                    });
+                }
+            </script>
+        </body>
     </main>
 </body>
 
