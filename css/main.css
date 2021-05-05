@@ -30,6 +30,7 @@ body {
     min-height:100vh;
     color: #fff;
     background: #039DFD;
+    text-shadow:2px 2px 4px rgba(0,0,0,0.8);
 }
 
 header {
