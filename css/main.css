@@ -3,6 +3,15 @@ img {
     max-width:100%;
 }
 
+h1, h2 {
+    font-weight:800;
+    color: #FFE791;
+    background: #FFE791;
+    background: linear-gradient(180deg, #FFE791 0%, #FFB200 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 /* UI */
 
 ::-webkit-scrollbar {
