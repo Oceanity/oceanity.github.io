@@ -31,7 +31,6 @@ body {
     display:flex;
     flex-direction:column;
     margin:0;
-    width:100vw;
     min-height:100vh;
     color: #fff;
     background: #039DFD;
