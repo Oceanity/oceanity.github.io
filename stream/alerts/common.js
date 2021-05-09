@@ -544,7 +544,7 @@ $(function () {
         };
     if (!window.music) window.music = new Audio();
     // Globals
-    let baseURL = 'https://oceanity.net/streaming/eb/',
+    let baseURL = 'https://oceanity.github.io/stream/alerts/eb/',
         container = $('#container'),
         enemyImage = document.getElementById('enemy-image'),
         alertSpan = document.createElement('span');
