@@ -1,0 +1,43 @@
+html {
+	width:100vw;
+	height:100vh;
+	background:transparent;
+}
+body {
+	position:relative;
+	margin:0;
+	width:100vw;
+	height:100vh;
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	overflow:hidden;
+	font-family:'Segoe UI';
+	font-weight:bold;
+	text-align:center;
+	color:#FFF;
+}
+.header {
+	display:inline-block;
+	position:absolute;
+	top:2vw;
+}
+h2 {
+	margin: 0;
+	font-size:4vw;
+	letter-spacing:0.2vw;
+	text-transform:uppercase;
+}
+h3 {
+	margin:0;
+	font-size:2.6vw;
+	font-weight:500;
+	letter-spacing:0.2vw;
+	margin-top:-1vw;
+	opacity:0.5;
+}
+.logo {
+	width:60vh;
+	height:auto;
+}

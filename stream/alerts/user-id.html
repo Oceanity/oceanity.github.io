@@ -1,0 +1,89 @@
+<html>
+	<head>
+		<title>Twitch.tv ID Lookup</title>
+		<style>
+			body {
+				display:flex;
+				flex-direction:column;
+				justify-content:center;
+				align-items:center;
+				margin:0;
+				min-height:100vh;
+			}
+			.form {
+				display:flex;
+				flex-direction:column;
+				justify-content: center;
+				border-radius:10px;
+				padding:40px;
+				font-family:'Segoe UI', 'Open Sans', sans-serif;
+				font-weight:bold;
+				text-align:center;
+				background-color:#6441A4;
+				color:#fff; 
+			}
+			.row {
+				display:flex;
+				flex-direction:row;
+				margin:0 0 20px;
+			}
+			input {
+				margin-right:10px;
+				padding:10px;
+				border:none;
+				flex-grow:1;
+			}
+			input:last-child {
+				margin-right:0;
+			}
+			input[type="submit"] {
+				background:#fff;
+				color:#6441A4;
+				font-weight:bold;
+				padding:10px 20px;
+				cursor:pointer;
+			}
+			.stream-name {
+				margin-top: -16vh;
+    			font-size: 38vh;
+				font-weight:500;
+				opacity:0.3;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="form">
+			<img src="Twitch_logo.svg" style=" margin:0 auto 20px; width:250px; max-width:100%;" />
+			<div class="row">
+				<form>
+					<input type="text" id="username" placeholder="Username">
+					<input type="submit" id="lookup" value="Lookup ID">
+				</form>
+			</div>
+			<span id="userid"></span>
+		</div>
+		<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+		<script type="text/javascript">
+			const myID = 21209878,
+				clientID = 'hjvhp1hwolxnjjpoaguxwamyipf5ls'
+			function UpdateTitle() {
+				$.ajax({
+					type:'GET',
+					dataType: 'json',
+					url: 'https://api.twitch.tv/helix/users?login=' + $('#username').val(),
+					headers: {
+						'Client-ID': clientID
+					},
+					success: function(r) {
+						$('#userid').text('ID: ' + r.data[0].id)
+					},
+					error: function(r) { console.log('error, could not retrieve user stream data') }
+				})
+			}
+			$('form').submit(function(e) {
+				e.preventDefault()
+				UpdateTitle()
+			})
+		</script>
+	</body>
+</html>

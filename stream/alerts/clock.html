@@ -1,0 +1,57 @@
+<html>
+	<head>
+		<style>
+			body {
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+				align-items: flex-end;
+				margin: 0;
+				font-family: 'Segoe UI', 'Open Sans', sans-serif;
+				font-size: 130vh;
+				line-height: 85vh;
+				font-weight: bold;
+				color: #fff;
+				overflow:hidden;
+			}
+			.timer {
+				display:flex;
+				flex-direction:row;
+			}
+			.small {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				font-size: 57vh;
+			}
+			.ampm {
+				line-height: normal;
+				margin-top: -28vh;
+				letter-spacing: 6vh;
+			}
+			.seconds {
+				opacity: 0.3;
+				font-weight: 500;
+				line-height: normal;
+				margin-top: -27vh;
+				font-size: 70vh;
+			}
+		</style>
+	</head>
+	<body>
+		<span class="timer">12:00<div class="small"><span class="ampm">am</span><span class="seconds">:00</span></div></span>
+		<script type="text/javascript">
+			var timer = document.getElementsByClassName('timer')[0]
+			window.setInterval(function() {
+				timer.innerHTML = time()
+			}, 1000)
+			function time() {
+				var time = new Date(),
+					hour = time.getHours(),
+					min = time.getMinutes().toString().padStart(2, '0'),
+					secs = time.getSeconds().toString().padStart(2, '0')
+				return (hour % 12 == 0 ? 12 : hour % 12) + ':' + min + '<div class="small"><span class="ampm">' + (hour > 11 ? 'pm' : 'am') + '</span><span class="seconds">:' + secs + '</span></div>'
+			} timer.innerHTML = time()
+		</script>
+	</body>
+</html>
