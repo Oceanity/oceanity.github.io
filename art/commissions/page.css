@@ -1,0 +1,103 @@
+.emote-group {
+    display: none;
+}
+
+.bg {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+}
+
+.bg p {
+    margin: 0 10px 0 0;
+    font-size: 12px;
+    font-weight: 700;
+    color: #3faa96;
+}
+
+.bg img {
+    margin: 0 2px;
+    width: 28px;
+    height: 28px;
+}
+
+.bg .wrapper {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    cursor:pointer;
+}
+
+.wrapper .preview {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    bottom: 100%;
+    margin-bottom: 16px;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    padding:10px;
+    background: #fff;
+    cursor:default;
+}
+
+.wrapper:hover .preview {
+    display: flex;
+}
+
+.wrapper .preview:before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 16px solid transparent;
+    border-right: 16px solid transparent;
+    border-top: 16px solid #fff;
+    position: absolute;
+    bottom: -16px;
+    z-index: 3;
+}
+
+.wrapper .preview:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 18px solid transparent;
+    border-right: 18px solid transparent;
+    border-top: 18px solid #eee;
+    position: absolute;
+    bottom: -19px;
+    z-index: 2;
+}
+
+.wrapper .preview img {
+    border-radius:8px;
+    margin-bottom:10px;
+    padding: 10px;
+    width: 112px;
+    height: 112px;
+    background: #eee;
+}
+
+.wrapper .preview h3,
+.wrapper .preview h4 {
+    margin:0;
+}
+
+.wrapper .preview h3 {
+    font-size:14px;
+    color: #333;
+}
+
+.wrapper .preview h4 {
+    font-size:10px;
+    color:#999;
+    white-space:nowrap;
+}
+
+.wrapper .preview a {
+    color:#9147FF;
+    text-decoration:none;
+    cursor:pointer;
+}
