@@ -22,7 +22,7 @@ for (let group of groups)
             previewText = document.createElement("p"),
             nameSpan = document.createElement("span");
         bgDiv.classList.add("bg");
-        bgDiv.classList.add("bgName");
+        bgDiv.classList.add(bgName);
         bgDiv.style.background = bgs[ bgName ];
         divs.push(bgDiv);
         group.append(bgDiv);

@@ -6,11 +6,11 @@
     display: flex;
     align-items: center;
     padding: 8px;
+    text-shadow:none;
 }
 
 .bg p {
     margin:0 10px 0 0;
-    text-shadow:none;
 }
 
 .light p, .lighter p {
@@ -53,6 +53,7 @@
     border: 2px solid #eee;
     border-radius: 8px;
     padding:10px;
+    min-width:132px;
     background: #fff;
     cursor:default;
 }
