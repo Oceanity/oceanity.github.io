@@ -10,13 +10,22 @@
 
 .bg p {
     margin:0 10px 0 0;
-    font-style:normal;
     text-shadow:none;
 }
+
+.light p, .lighter p {
+    color:#000;
+}
+
+.dark p, .darker p {
+    color:#fff;
+}
+
 .bg p span {
     margin: 0;
     font-size: 12px;
     font-weight: 700;
+    font-style:normal;
     color: #3faa96;
 }
 
@@ -78,7 +87,7 @@
 
 .wrapper .preview img {
     border-radius:8px;
-    margin-bottom:10px;
+    margin:0 20px 10px 20px;
     padding: 10px;
     width: 112px;
     height: 112px;
