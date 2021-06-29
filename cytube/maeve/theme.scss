@@ -1,0 +1,38 @@
+@import "../common.min.css";
+
+body {
+    margin: 0;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    color: #eee;
+    overflow: auto;
+    background: url("bg.png?v=0.01") top left / cover;
+
+    &:before,
+    &:after {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    &:before {
+        background: rgba(0, 0, 0, 0.7);
+        z-index: -1;
+    }
+
+    &:after {
+        background: url("bg.png") top center / cover;
+        z-index: -2;
+    }
+}
+
+.navbar-brand {
+    font-size: 0;
+}
+
+.navbar-brand:before {
+    content: "CrysTube";
+    font-size: 24px;
+}

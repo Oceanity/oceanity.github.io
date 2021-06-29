@@ -1,0 +1,19 @@
+#wrap,
+#mainpage {
+	display:flex;
+	flex-direction:column;
+}
+.container-fluid {
+	display:flex;
+	flex:1;
+	flex-direction:column;
+	justify-content:space-between;
+}
+#motdrow {
+	order:5;
+}
+#motdwrap {
+	margin:0;
+	padding:0;
+	background-color:#000;
+}
