@@ -3,6 +3,7 @@
 <head>
     <title>Oceanity MMRs</title>
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="page.css">
 </head>
 
 <body>
@@ -19,18 +20,29 @@
         </nav>
     </header>
     <main>
+        <audio id="audio-container" type="audio/ogg" controls></audio>
         <h1>MMR Music</h1>
         <a name="Animal Crossing: Wild World"></a>
         <h2>Animal Crossing: Wild World</h2>
         <ul>
             <li>
-                <audio src="https://github.com/Oceanity/Oceanitys-MMR-Music/raw/main/ogg/acww-the-roost-v2.ogg"
-                    type="audio/ogg" controls></audio>
+                The Roost
+                <a class="play"
+                    href="https://github.com/Oceanity/Oceanitys-MMR-Music/raw/main/ogg/acww-the-roost-v2.ogg"></a>
                 <a class="download"
                     href="https://github.com/Oceanity/Oceanitys-MMR-Music/raw/main/mmrs/acww-the-roost-v2.mmrs"></a>
             </li>
         </ul>
+        <div id="player">
+            <p id="now-playing-title">Nothing</p>
+            <div id="controls">
+                <div id="now-playing-progress">
+                    <div id="now-playing-progress-bar"></div>
+                </div>
+            </div>
+        </div>
     </main>
+    <script src="scripts.js"></script>
 </body>
 
 </html>
