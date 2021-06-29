@@ -8,6 +8,10 @@ h1, h2 {
     color: #FFE791;
 }
 
+a {
+    text-decoration:none;
+}
+
 /* UI */
 
 ::-webkit-scrollbar {
@@ -40,9 +44,9 @@ body {
 
 header {
     display:flex;
+    flex-direction:column;
     justify-content:center;
     align-items:center;
-    height:480px;
     background-color: #aaf6f2;
     background: linear-gradient(180deg, #09d1ff 0%, #aaf6f2 100%);
     background-repeat:no-repeat;
@@ -50,7 +54,25 @@ header {
 }
 
 header img {
-    width: 720px;
+    padding: 160px 20px;
+    width: 680px;
+    box-sizing:border-box;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    background-color: rgba(0,0,0,0.2);
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav a {
+    color:#fff;
 }
 
 main {
