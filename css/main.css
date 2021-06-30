@@ -84,6 +84,10 @@ header nav ul {
     list-style-type: none;
 }
 
+header nav li {
+    position:relative;
+}
+
 header nav a {
     display:inline-block;
     padding:20px;
@@ -94,6 +98,18 @@ header nav a {
 
 header nav a:hover {
     background-color:rgba(255,255,255,0.7);
+}
+
+header nav .submenu {
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    z-index:2;
+}
+
+header nav a:hover ~ .submenu {
+    display:block;
 }
 
 main {
