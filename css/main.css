@@ -9,7 +9,11 @@ h1, h2 {
 }
 
 a {
+    color: #FFE791;
     text-decoration:none;
+}
+a:hover {
+    color: red;
 }
 
 a.download {
