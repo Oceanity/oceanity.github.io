@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <title>Stream Sound Effects</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="page.css">
+</head>
+
+<body>
+    <header>
+        <a href="/">
+            <img alt="Oceanity Logo" src="/images/logo-print.png" />
+        </a>
+        <nav>
+            <ul>
+                <li>
+                    <a href="">Stream</a>
+                    <ul class="submenu">
+                        <li>
+                            <a href="/stream/sounds">Sounds</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/mmrs">MMRs</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Utilizing Subtract EQ in OBS</h1>
+        <h2>Getting Reaper Plugins</h2>
+        <p>Download and install Reaper Plugins (64-bit if you have 64-bit Windows) here: <a
+                href="https://www.reaper.fm/reaplugs/reaplugs236_x64-install.exe">64-bit</a> <a
+                href="https://www.reaper.fm/reaplugs/reaplugs236-install.exe">32-bit</a></p>
+        <h2>Add Reaper Plugin as OBS Filter</h2>
+        <p>Right click mic input in OBS Studio and select Filters</p>
+        <img src="images/step1.png" />
+        <p>Click the + at the bottom right of the window, add VST 2.x Plug-in</p>
+        <img src="images/step2.png" />
+        <p>Change dropdown to reafir_standalone and click Open Plug-in Interface</p>
+        <img src="images/step3.png" />
+        <p>Change Mode to Subtract and click Automatically build noise profile (enable during noise) and let the
+            microphone listen to the background noise for about 5 seconds while staying silent, then click box again.
+            Now your mic should automatically ignore the background noise!</p>
+    </main>
+</body>
+
+</html>
