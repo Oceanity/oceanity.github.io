@@ -64,7 +64,7 @@ html {
 }
 
 #alert-text.bullet {
-    background: url("https://oceanity.net/streaming/eb-border-mint-bullet.png") 1vh 2vh no-repeat #290829;
+    background: url("eb-border-mint-bullet.png") 1vh 2vh no-repeat #290829;
     background-size: 4vh auto;
 }
 
