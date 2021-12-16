@@ -36,8 +36,9 @@ for (let group of groups)
     for (let emote of emotes)
     {
         const img = document.createElement("img"),
-            name = `${ prefix }${ emote.getAttribute("data-emote") }`,
-            path = `images/${ channel }/${ name }.png`;
+            code = emote.getAttribute("data-emote"),
+            name = `${ prefix }${ code }`,
+            path = `images/${ channel }/${ code }.png`;
         img.src = path;
         for (let div of divs)
         {
