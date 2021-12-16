@@ -94,16 +94,16 @@
     width: 112px;
     height: 112px;
 }
-.wrapper.lighter .preview img {
+.lighter .preview img {
     background: #F7F7F8;
 }
-.wrapper.light .preview img {
+.light .preview img {
     background: #EFEEF1;
 }
-.wrapper.dark .preview img {
+.dark .preview img {
     background: #212126;
 }
-.wrapper.darker .preview img {
+.darker .preview img {
     background: #000;
 }
 
