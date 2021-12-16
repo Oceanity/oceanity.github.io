@@ -92,7 +92,18 @@
     padding: 10px;
     width: 112px;
     height: 112px;
-    background: #eee;
+}
+.wrapper.lighter .preview img {
+    background: #F7F7F8;
+}
+.wrapper.light .preview img {
+    background: #EFEEF1;
+}
+.wrapper.dark .preview img {
+    background: #212126;
+}
+.wrapper.darker .preview img {
+    background: #000;
 }
 
 .wrapper .preview h3,
