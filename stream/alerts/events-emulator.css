@@ -1,8 +1,0 @@
-body.widget-EventList {
-  flex-direction:column !important;
-  width:100vw !important;
-}
-body.widget-EventList li {
-  font-size: 24px !important;
-  background: red !important;
-}
