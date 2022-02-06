@@ -1,0 +1,33 @@
+@import "../common.min.css";
+
+body {
+    margin: 0;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    color: #eee;
+    overflow: auto;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#007b80+0,80017a+100 */
+    background: #007b80;
+    /* Old browsers */
+    background: linear-gradient(270deg, #007b80, #80017a, #007b80);
+    background-size: 200vw 100vh;
+    animation: BGScroll 25s linear infinite;
+}
+
+@keyframes BGScroll {
+    from {
+        background-position-x: 0;
+    }
+
+    to {
+        background-position-x: -200vw;
+    }
+}
+
+.navbar-brand {
+    font-size: 0;
+    width: 200px;
+    background-image: url("logo.svg");
+    background-size: 90% auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
