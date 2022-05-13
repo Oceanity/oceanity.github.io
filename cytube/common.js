@@ -8,8 +8,10 @@ $(() => {
     let showNSFW = false,
         tenorSearch = "";
 
-    const { log } = console,
-        messageBuffer = $("#messagebuffer"),
+    const {
+        log
+    } = console,
+    messageBuffer = $("#messagebuffer"),
         chatWrap = $("#chatwrap");
 
     // Simulate Enter
@@ -55,11 +57,16 @@ $(() => {
         tenorGifList.empty();
         tenorModal.show(function () {
             $.ajax({
-                url: `https://api.tenor.com/v1/search?q=${tenorSearch}&locale=en_US&media_filter=minimal&contentfilter=${showNSFW ? "off" : "high"}`,
+                url: `https://api.tenor.com/v1/search?key=WGK7H58Q6TXZ&q=${tenorSearch}&locale=en_US&media_filter=minimal&contentfilter=${showNSFW ? "off" : "high"}`,
                 success: function (res) {
-                    const { results } = res;
+                    const {
+                        results
+                    } = res;
                     for (let gif of results) {
-                        const { media, url } = gif;
+                        const {
+                            media,
+                            url
+                        } = gif;
                         let first = media.shift();
                         let gifItem = $("<li>", {
                                 "data-full": first.gif.url,
@@ -106,8 +113,13 @@ $(() => {
         log("clear");
     });
     socket.on("chatMsg", data => {
-        const { username, msg, meta, time } = data,
-            byAuthor = document.getElementsByClassName(`chat-msg-${username}`);
+        const {
+            username,
+            msg,
+            meta,
+            time
+        } = data,
+        byAuthor = document.getElementsByClassName(`chat-msg-${username}`);
         EmbedImages(byAuthor[byAuthor.length - 1]);
     });
 
