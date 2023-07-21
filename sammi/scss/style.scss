@@ -63,7 +63,7 @@ td {
 
 .pagination-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 
     .page-list {
         display: flex;
@@ -297,10 +297,15 @@ td {
                 white-space: nowrap;
             }
 
-            .avatar {
+            .avatar,
+            .no-avatar {
                 border-radius: 4px;
                 width: 28px;
                 align-self: center;
+            }
+            .no-avatar {
+                height: 28px;
+                background: lightgray;
             }
 
             .username {
@@ -440,6 +445,9 @@ td {
     }
     .oceanity-entry-table {
         font-size: 1.2em;
+    }
+    #pronouns-plus-sets-table {
+        font-size: 1em;
     }
 }
 
