@@ -96,7 +96,7 @@ td {
                 color: rgb(255 255 255 / 75%) !important;
                 text-shadow: 1px 1px 2px rgb(0 0 0 / 50%);
                 background: $tab-inactive;
-                user-select: none;
+                user-select: none !important;
 
                 &:hover {
                     color: rgb(255 255 255 / 85%) !important;
