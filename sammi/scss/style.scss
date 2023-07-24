@@ -11,6 +11,7 @@ $internal-panel-border: 1px solid rgb(255 255 255 / 50%);
 $tab-inactive: rgb(0 0 0 / 25%);
 $tab-hover: rgb(0 50 50 / 25%);
 $spinner-size: 48px;
+$dark-screen-bg: rgb(15 38 42 / 70%);
 
 /* Pronouns Plus */
 $pronoun-set-gap: 6px;
@@ -44,7 +45,77 @@ td {
     }
 }
 
+form .error {
+    opacity: 0;
+    color: #f56c6c;
+    text-shadow: 1px 1px 1px #000;
+    transition: opacity 0.5s ease;
+}
+input {
+    border-radius: $border-radius;
+    border: 1px solid #000;
+    padding: 4px 8px;
+    color: #fff;
+    background: $dark-screen-bg;
+}
+
+input:valid {
+    outline-color: #6cf57e;
+}
+input:invalid {
+    outline-color: #f56c6c;
+}
+input:invalid ~ .error {
+    opacity: 1;
+}
+
+::placeholder {
+    color: #aaa;
+}
+
+button {
+    padding: 4px 10px;
+    border-radius: $border-radius;
+    box-shadow: 1px 1px 1px #000;
+    outline: none;
+    color: #fff;
+    text-shadow: 1px 1px 2px #000;
+    background: #006bff;
+}
+
+.oceanity-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    opacity: 0;
+    pointer-events: none;
+    background: rgb(0 0 0 / 70%);
+    transition: opacity 0.5s ease;
+
+    &.shown {
+        pointer-events: all;
+        opacity: 1;
+    }
+
+    .modal-panel {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        border: 1px solid #fff;
+        border-radius: $border-radius;
+        padding: 10px;
+        background: #15849b;
+    }
+}
+
 .wrapper {
+    position: relative;
     margin: -20px;
     padding: 10px;
     min-height: 400px;
@@ -197,6 +268,10 @@ td {
                 background-image: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="UTF-8"%3F><svg viewBox="0 0 248 204" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"> <path d="M221.95 51.29c.15 2.17.15 4.34.15 6.53 0 66.73-50.8 143.69-143.69 143.69v-.04c-27.44.04-54.31-7.82-77.41-22.64 3.99.48 8 .72 12.02.73 22.74.02 44.83-7.61 62.72-21.66-21.61-.41-40.56-14.5-47.18-35.07 7.57 1.46 15.37 1.16 22.8-.87-23.56-4.76-40.51-25.46-40.51-49.5v-.64c7.02 3.91 14.88 6.08 22.92 6.32C11.58 63.31 4.74 33.79 18.14 10.71c25.64 31.55 63.47 50.73 104.08 52.76-4.07-17.54 1.49-35.92 14.61-48.25 20.34-19.12 52.33-18.14 71.45 2.19 11.31-2.23 22.15-6.38 32.07-12.26-3.77 11.69-11.66 21.62-22.2 27.93 10.01-1.18 19.79-3.86 29-7.95-6.78 10.16-15.32 19.01-25.2 26.16z" fill="%23ffffff"/></svg>');
             }
 
+            .mastodon {
+                background-image: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="UTF-8"%3F><svg width="61.077mm" height="65.478mm" version="1.1" viewBox="0 0 216.41 232.01" xmlns="http://www.w3.org/2000/svg"><path d="m107.87 0c-29.661 0.2425-58.193 3.4545-74.821 11.091 0 0-32.977 14.751-32.977 65.081 0 11.525-0.22401 25.305 0.14099 39.919 1.1975 49.22 9.0232 97.729 54.531 109.77 20.982 5.5537 38.998 6.7173 53.507 5.9198 26.311-1.4588 41.082-9.3896 41.082-9.3896l-0.86792-19.091s-18.803 5.9282-39.919 5.2057c-20.921-0.7175-43.008-2.2557-46.392-27.942-0.3125-2.2562-0.46875-4.6696-0.46875-7.2034 0 0 20.538 5.0203 46.566 6.2128 15.915 0.72999 30.839-0.93235 45.998-2.7411 29.07-3.4712 54.382-21.383 57.563-37.749 5.0125-25.781 4.5996-62.915 4.5996-62.915 0-50.33-32.975-65.081-32.975-65.081-16.626-7.6362-45.176-10.848-74.837-11.091h-0.72876zm-33.569 39.326c12.355 0 21.71 4.7487 27.896 14.247l6.015 10.082 6.015-10.082c6.185-9.4987 15.54-14.247 27.896-14.247 10.677 0 19.281 3.7536 25.851 11.076 6.3687 7.3225 9.5398 17.221 9.5398 29.676v60.941h-24.144v-59.15c0-12.469-5.246-18.798-15.74-18.798-11.602 0-17.417 7.5067-17.417 22.352v32.377h-24.001v-32.377c0-14.845-5.8163-22.352-17.419-22.352-10.494 0-15.74 6.3289-15.74 18.798v59.15h-24.144v-60.941c0-12.455 3.1716-22.353 9.5416-29.676 6.5687-7.3225 15.172-11.076 25.851-11.076z" fill="%23fff"/></svg>');
+            }
+
             .kofi {
                 background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="%23ffffff"><path d="M31.844 11.932c-1.032-5.448-6.48-6.125-6.48-6.125h-24.4c-0.808 0-0.907 1.063-0.907 1.063s-0.109 9.767-0.027 15.767c0.22 3.228 3.448 3.561 3.448 3.561s11.021-0.031 15.953-0.067c3.251-0.568 3.579-3.423 3.541-4.98 5.808 0.323 9.896-3.776 8.871-9.219zM17.093 16.615c-1.661 1.932-5.348 5.297-5.348 5.297s-0.161 0.161-0.417 0.031c-0.099-0.073-0.14-0.12-0.14-0.12-0.595-0.588-4.491-4.063-5.381-5.271-0.943-1.287-1.385-3.599-0.119-4.948 1.265-1.344 4.005-1.448 5.817 0.541 0 0 2.083-2.375 4.625-1.281 2.536 1.095 2.443 4.016 0.963 5.751zM25.323 17.251c-1.24 0.156-2.244 0.036-2.244 0.036v-7.573h2.359c0 0 2.631 0.735 2.631 3.516 0 2.552-1.313 3.557-2.745 4.021z" fill="%23ffffff"/></svg>');
             }
@@ -258,7 +333,7 @@ td {
     padding: 0;
     border-radius: $border-radius;
     height: 300px;
-    background: rgb(15 38 42 / 70%);
+    background: $dark-screen-bg;
     overflow: auto;
     font-size: 1.4em;
 
