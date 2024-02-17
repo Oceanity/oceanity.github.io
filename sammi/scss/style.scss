@@ -509,6 +509,7 @@ button {
     div {
         &:before {
             content: attr(data-version);
+            display: block;
             font-size: 18px;
             font-weight: bolder;
             color: $gold-text-color;
