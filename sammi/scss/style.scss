@@ -499,23 +499,29 @@ button {
     }
 }
 
-.oceanity-version-panel {
-    padding: $internal-padding;
-    background: $dark-screen-bg;
-    border-radius: $border-radius;
+.oceanity-versions-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: $internal-padding;
 
-    h2 {
-        font-size: 18px;
-        font-weight: bolder;
-        color: $gold-text-color;
-    }
+    .oceanity-version-panel {
+        padding: $internal-padding;
+        background: $dark-screen-bg;
+        border-radius: $border-radius;
 
-    h3 {
-        font-size: 16px;
-    }
+        h2 {
+            font-size: 18px;
+            font-weight: bolder;
+            color: $gold-text-color;
+        }
 
-    ul {
-        font-size: 14px;
+        h3 {
+            font-size: 16px;
+        }
+
+        ul {
+            font-size: 14px;
+        }
     }
 }
 
