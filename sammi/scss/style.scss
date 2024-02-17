@@ -507,15 +507,16 @@ button {
     overflow: auto;
 
     div {
-        padding: $internal-padding;
-        background: $dark-screen-bg;
-        border-radius: $border-radius;
-
-        h2 {
-            font-size: 18px;
+        &:before {
+            content: attr(data-version);
+            font-size: 14px;
             font-weight: bolder;
             color: $gold-text-color;
         }
+
+        padding: $internal-padding;
+        background: $dark-screen-bg;
+        border-radius: $border-radius;
 
         h3 {
             font-size: 16px;
