@@ -503,8 +503,10 @@ button {
     display: flex;
     flex-direction: column;
     gap: $internal-padding;
+    max-height: 300px;
+    overflow: auto;
 
-    .oceanity-version-panel {
+    div {
         padding: $internal-padding;
         background: $dark-screen-bg;
         border-radius: $border-radius;
