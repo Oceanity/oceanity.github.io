@@ -495,6 +495,23 @@ button {
     }
 }
 
+.oceanity-version-panel {
+    background: $internal-panel-bg;
+    border-radius: $border-radius;
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    ul {
+        font-size: 14px;
+    }
+}
+
 @keyframes rotation {
     0% {
         transform: rotate(0deg);
