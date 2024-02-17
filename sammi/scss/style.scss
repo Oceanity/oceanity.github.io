@@ -509,9 +509,10 @@ button {
     div {
         &:before {
             content: attr(data-version);
-            font-size: 14px;
+            font-size: 16px;
             font-weight: bolder;
             color: $gold-text-color;
+            margin-bottom: 4px;
         }
 
         padding: $internal-padding;
