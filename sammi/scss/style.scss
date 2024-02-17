@@ -1,4 +1,5 @@
 $border-radius: 4px;
+$internal-padding: 10px;
 $ocean-bg: linear-gradient(
     0deg,
     rgb(11 43 94) 0%,
@@ -12,6 +13,9 @@ $tab-inactive: rgb(0 0 0 / 25%);
 $tab-hover: rgb(0 50 50 / 25%);
 $spinner-size: 48px;
 $dark-screen-bg: rgb(15 38 42 / 70%);
+
+/* Colors */
+$gold-text-color: #ffd700;
 
 /* Pronouns Plus */
 $pronoun-set-gap: 6px;
@@ -109,7 +113,7 @@ button {
         gap: 10px;
         border: 1px solid #fff;
         border-radius: $border-radius;
-        padding: 10px;
+        padding: $internal-padding;
         background: #15849b;
     }
 }
@@ -117,7 +121,7 @@ button {
 .wrapper {
     position: relative;
     margin: -20px;
-    padding: 10px;
+    padding: $internal-padding;
     min-height: 400px;
     background: $ocean-bg;
 
@@ -191,7 +195,7 @@ button {
         }
     }
     .content {
-        padding: 10px;
+        padding: $internal-padding;
         background: $internal-panel-bg;
 
         > div:not(:first-child) {
@@ -298,7 +302,7 @@ button {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding: 10px;
+    padding: $internal-padding;
     background: rgb(15 38 42 / 50%);
 
     * {
@@ -496,15 +500,18 @@ button {
 }
 
 .oceanity-version-panel {
-    background: $internal-panel-bg;
+    padding: $internal-padding;
+    background: $dark-screen-bg;
     border-radius: $border-radius;
 
     h2 {
-        font-size: 24px;
+        font-size: 18px;
+        font-weight: bolder;
+        color: $gold-text-color;
     }
 
     h3 {
-        font-size: 20px;
+        font-size: 16px;
     }
 
     ul {
